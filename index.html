@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support the Spanish Speaking Organization</title>
+    <title>Georgia Tech SSO - Cada fiesta, cada beca, cada bienvenida</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -48,23 +48,30 @@
             flex: 1;
         }
 
+        .org-badge {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            color: #b3852b; /* GT Gold tone */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
         .title {
             font-size: 32px;
             margin-top: 0;
             margin-bottom: 20px;
             font-weight: 800;
-            line-height: 1.2;
+            line-height: 1.25;
+            color: #1f2937;
         }
         .hero-img {
             width: 100%;
             border-radius: 12px;
             background-color: #e2e8f0;
             aspect-ratio: 16/9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            color: #64748b;
+            display: block;
             margin-bottom: 25px;
             object-fit: cover;
         }
@@ -77,22 +84,24 @@
             border-bottom: 1px solid #e5e5e5;
         }
         .avatar {
-            width: 44px;
-            height: 44px;
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
-            background: #02a95c;
-            color: white;
+            background: #b3852b;
+            color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
+            font-size: 16px;
+            font-weight: 800;
         }
         .organizer-text {
-            font-size: 16px;
+            font-size: 15px;
+            line-height: 1.4;
         }
         .organizer-text strong {
             display: block;
+            color: #111;
         }
         .story {
             line-height: 1.7;
@@ -101,6 +110,33 @@
         }
         .story p {
             margin-bottom: 20px;
+        }
+        .story h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        .impact-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .impact-list li {
+            padding: 12px 16px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.5;
+        }
+        .impact-list li span.icon {
+            font-size: 22px;
+            line-height: 1;
         }
 
         .donation-card {
@@ -219,7 +255,7 @@
 <body>
 
     <header>
-        <a href="index.html" class="logo">GoFundMe</a>
+        <a href="index.html" class="logo">FundHub</a>
         <div class="nav-links">
             <a href="#">Search</a>
             <a href="#">Sign In</a>
@@ -229,70 +265,83 @@
     <div class="container">
         
         <div class="main-col">
-            <h1 class="title">Support the Spanish Speaking Organization</h1>
+            <div class="org-badge">Georgia Tech • Spanish Speaking Organization</div>
+            <h1 class="title">Cada fiesta, cada beca, cada bienvenida, gracias a ustedes.</h1>
             
-            <img class="hero-img" src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1200&q=80" alt="Community support">
+            <img class="hero-img" src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80" alt="GT SSO Community and Celebration">
             
             <div class="organizer">
-                <div class="avatar">SO</div>
+                <div class="avatar">GT</div>
                 <div class="organizer-text">
-                    <strong>Spanish Speaking Organization</strong>
-                    is organizing this fundraiser to support the local community.
+                    <strong>Georgia Tech Spanish Speaking Organization (GT SSO)</strong>
+                    Student Organization Fundraiser • Atlanta, GA
                 </div>
             </div>
 
             <div class="story">
-                <p>Hello community,</p>
-                <p>The <strong>Spanish Speaking Organization (SSO)</strong> has been a cornerstone of our community for over a decade. Our mission is to empower, educate, and advocate for Spanish-speaking individuals and families in our region.</p>
-                <p>We provide essential services such as:</p>
-                <ul>
-                    <li>Free English as a Second Language (ESL) classes.</li>
-                    <li>Legal and immigration resource workshops.</li>
-                    <li>Community cultural events and youth mentorship.</li>
+                <p><strong>Estimados miembros de GT SSO,</strong></p>
+                <p>This semester, GT SSO brought together over 300 students for Noche de Salsa, our Día de los Muertos altar exhibit in the Student Center, and weekly conversation tables that turned strangers into a <em>familia</em>. None of it happens without members like you.</p>
+                
+                <p>As we plan for Hispanic Heritage Month and next spring's scholarship fund, we're asking members to consider a small donation to help cover venue costs, performer honorariums, and supplies for our cultural events.</p>
+
+                <h3>Where your donation goes:</h3>
+                <ul class="impact-list">
+                    <li>
+                        <span class="icon">🎉</span>
+                        <div><strong>Cultural events:</strong> Noche de Salsa, Día de los Muertos, Carnaval night</div>
+                    </li>
+                    <li>
+                        <span class="icon">🎓</span>
+                        <div><strong>The GT SSO scholarship fund:</strong> for study-abroad members</div>
+                    </li>
+                    <li>
+                        <span class="icon">🍳</span>
+                        <div><strong>Weekly tables:</strong> Free food and supplies at weekly conversation practice tables across campus</div>
+                    </li>
+                    <li>
+                        <span class="icon">🏆</span>
+                        <div><strong>Conference delegation:</strong> Travel support for our delegation to the regional LSA conference</div>
+                    </li>
                 </ul>
-                <p>Due to recent cuts in local funding, we are facing a significant budget shortfall. To keep our doors open and continue offering these vital services free of charge, we need your help.</p>
-                <p>Your donation will directly fund our educational programs and ensure that our community center remains a safe, welcoming hub for everyone. Whether you can give $5 or $500, every contribution makes a difference.</p>
-                <p>Thank you for standing with us. ¡Gracias por su apoyo!</p>
             </div>
         </div>
 
         <div class="side-col">
             <div class="donation-card">
-                <div class="progress-text">$4,500 <span style="font-weight: normal; font-size: 16px; color: #666;">raised of $10,000 goal</span></div>
-                <div class="progress-subtext">87 donations</div>
+                <div class="progress-text">$1,850 <span style="font-weight: normal; font-size: 16px; color: #666;">raised of $5,000 goal</span></div>
+                <div class="progress-subtext">34 donations</div>
                 
                 <div class="progress-bar-bg">
-                    <div class="progress-bar-fill"></div>
+                    <div class="progress-bar-fill" style="width: 37%;"></div>
                 </div>
 
-                <!-- Click takes users to donate.html -->
                 <a href="donate.html" class="btn btn-donate">Donate now</a>
                 <a href="#" class="btn btn-share" onclick="navigator.clipboard.writeText(window.location.href); alert('Fundraiser link copied to clipboard!'); return false;">Share</a>
 
                 <div class="recent-donations">
-                    <h3>Recent Donations</h3>
+                    <h3>Recent Supporters</h3>
                     
                     <div class="donation-item">
-                        <div class="donation-icon">👤</div>
+                        <div class="donation-icon">🐝</div>
                         <div class="donation-details">
-                            <div class="donation-name">Maria Rodriguez</div>
-                            <div class="donation-amount">$100 • 2 hrs ago</div>
+                            <div class="donation-name">Mateo S.</div>
+                            <div class="donation-amount">$50 • 2 hrs ago</div>
                         </div>
                     </div>
                     
                     <div class="donation-item">
-                        <div class="donation-icon">👤</div>
+                        <div class="donation-icon">🐝</div>
                         <div class="donation-details">
-                            <div class="donation-name">Anonymous</div>
-                            <div class="donation-amount">$50 • 5 hrs ago</div>
+                            <div class="donation-name">Anonymous Yellow Jacket</div>
+                            <div class="donation-amount">$25 • 4 hrs ago</div>
                         </div>
                     </div>
 
                     <div class="donation-item">
-                        <div class="donation-icon">👤</div>
+                        <div class="donation-icon">🐝</div>
                         <div class="donation-details">
-                            <div class="donation-name">Carlos V.</div>
-                            <div class="donation-amount">$25 • 1 day ago</div>
+                            <div class="donation-name">Elena Gomez</div>
+                            <div class="donation-amount">$100 • 1 day ago</div>
                         </div>
                     </div>
 
