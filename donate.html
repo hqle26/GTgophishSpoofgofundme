@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Your Donation - Spanish Speaking Organization</title>
+    <title>Support GT SSO - Make Your Donation</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -48,7 +48,7 @@
         h1 {
             font-size: 26px;
             margin-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             font-weight: 800;
         }
         p.subtitle {
@@ -56,18 +56,29 @@
             margin-bottom: 25px;
             font-size: 15px;
         }
+        .section-heading {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e5e7eb;
+        }
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
         label {
             display: block;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-size: 14px;
+            color: #374151;
         }
         input[type="text"],
         input[type="email"],
-        input[type="number"] {
+        input[type="number"],
+        select {
             width: 100%;
             padding: 12px 14px;
             border: 1px solid #ccc;
@@ -75,9 +86,10 @@
             font-size: 15px;
             box-sizing: border-box;
             outline: none;
+            background-color: #fff;
             transition: border-color 0.2s;
         }
-        input:focus {
+        input:focus, select:focus {
             border-color: #02a95c;
         }
         .amount-presets {
@@ -102,10 +114,16 @@
         }
         .row {
             display: flex;
-            gap: 15px;
+            gap: 12px;
         }
         .row .form-group {
             flex: 1;
+        }
+        .flex-2 {
+            flex: 2 !important;
+        }
+        .flex-1 {
+            flex: 1 !important;
         }
         .btn-submit {
             display: block;
@@ -119,7 +137,7 @@
             background: linear-gradient(180deg, #ffde00 0%, #ffc600 100%);
             color: #333;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-top: 10px;
+            margin-top: 25px;
             transition: background 0.2s ease;
         }
         .btn-submit:hover {
@@ -139,26 +157,30 @@
 <body>
 
     <header>
-        <a href="index.html" class="logo">FundHub</a>
+        <a href="index.html" class="logo">GoFundMe</a>
     </header>
 
     <div class="container">
-        <a href="index.html" class="back-link">&larr; Back to fundraiser</a>
+        <a href="index.html" class="back-link">&larr; Back to GT SSO Campaign</a>
         <h1>Make your donation</h1>
-        <p class="subtitle">Supporting the Spanish Speaking Organization</p>
+        <p class="subtitle">Supporting Georgia Tech Spanish Speaking Organization</p>
 
-        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Note: To accept actual transactions, this form must connect to a gateway like Stripe.');">
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Muchas gracias por su apoyo! To accept actual credit card payments, connect this form to a backend or Stripe Elements.');">
+            
+            <!-- Amount Section -->
             <div class="form-group">
                 <label>Select Donation Amount</label>
                 <div class="amount-presets">
-                    <button type="button" class="amount-btn" onclick="document.getElementById('amount').value='25'">$25</button>
+                    <button type="button" class="amount-btn" onclick="document.getElementById('amount').value='15'">$15</button>
+                    <button type="button" class="amount-btn" onclick="document.getElementById('amount').value='30'">$30</button>
                     <button type="button" class="amount-btn" onclick="document.getElementById('amount').value='50'">$50</button>
                     <button type="button" class="amount-btn" onclick="document.getElementById('amount').value='100'">$100</button>
-                    <button type="button" class="amount-btn" onclick="document.getElementById('amount').value='250'">$250</button>
                 </div>
                 <input type="number" id="amount" placeholder="Custom amount ($ USD)" min="1" required>
             </div>
 
+            <!-- Personal Info -->
+            <div class="section-heading">Donor Information</div>
             <div class="row">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
@@ -172,9 +194,51 @@
 
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="you@example.com" required>
+                <input type="email" id="email" placeholder="gtusername@gatech.edu" required>
             </div>
 
+            <!-- Billing Address -->
+            <div class="section-heading">Billing Address</div>
+            
+            <div class="form-group">
+                <label for="streetAddress">Street Address</label>
+                <input type="text" id="streetAddress" placeholder="123 Main St" required>
+            </div>
+
+            <div class="form-group">
+                <label for="aptSuite">Apt, Suite, Unit <span style="font-weight: normal; color: #888;">(Optional)</span></label>
+                <input type="text" id="aptSuite" placeholder="Apt 4B">
+            </div>
+
+            <div class="row">
+                <div class="form-group flex-2">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Atlanta" required>
+                </div>
+                <div class="form-group flex-1">
+                    <label for="state">State</label>
+                    <input type="text" id="state" placeholder="GA" maxlength="2" required>
+                </div>
+                <div class="form-group flex-1">
+                    <label for="zipCode">ZIP Code</label>
+                    <input type="text" id="zipCode" placeholder="30332" maxlength="10" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" required>
+                    <option value="US" selected>United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="MX">Mexico</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="OTHER">Other</option>
+                </select>
+            </div>
+
+            <!-- Payment Details -->
+            <div class="section-heading">Payment Details</div>
+            
             <div class="form-group">
                 <label for="cardNumber">Card Number</label>
                 <input type="text" id="cardNumber" placeholder="4242 •••• •••• 4242" maxlength="19" required>
