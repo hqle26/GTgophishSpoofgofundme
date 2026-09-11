@@ -1,355 +1,2598 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Georgia Tech SSO - Cada fiesta, cada beca, cada bienvenida</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fbf8f6;
-            color: #333;
-        }
-        
-        header {
-            background: #fff;
-            padding: 15px 5%;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: 900;
-            color: #02a95c;
-            text-decoration: none;
-        }
-        .nav-links a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GT SSO | Spanish Speaking Organization at Georgia Tech</title>
+  <meta name="description" content="Official website of the Georgia Tech Spanish Speaking Organization (GT SSO). Cada fiesta, cada beca, cada bienvenida. Building comunidad and familia at GT.">
+  <meta name="theme-color" content="#003057">
 
-        .container {
-            max-width: 1040px;
-            margin: 40px auto;
-            display: flex;
-            gap: 50px;
-            padding: 0 20px;
-        }
-        .main-col {
-            flex: 1.8;
-        }
-        .side-col {
-            flex: 1;
-        }
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gtspanishspeaking.org/">
+  <meta property="og:title" content="Georgia Tech Spanish Speaking Organization (GT SSO)">
+  <meta property="og:description" content="Cada fiesta, cada beca, cada bienvenida. Empowering, educating, and building familia for the Hispanic and Spanish-speaking community at Georgia Tech.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80">
 
-        .org-badge {
-            display: inline-block;
-            font-size: 14px;
-            font-weight: 700;
-            color: #b3852b; /* GT Gold tone */
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        .title {
-            font-size: 32px;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-weight: 800;
-            line-height: 1.25;
-            color: #1f2937;
-        }
-        .hero-img {
-            width: 100%;
-            border-radius: 12px;
-            background-color: #e2e8f0;
-            aspect-ratio: 16/9;
-            display: block;
-            margin-bottom: 25px;
-            object-fit: cover;
-        }
-        .organizer {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-        .avatar {
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background: #b3852b;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            font-weight: 800;
-        }
-        .organizer-text {
-            font-size: 15px;
-            line-height: 1.4;
-        }
-        .organizer-text strong {
-            display: block;
-            color: #111;
-        }
-        .story {
-            line-height: 1.7;
-            font-size: 17px;
-            color: #222;
-        }
-        .story p {
-            margin-bottom: 20px;
-        }
-        .story h3 {
-            font-size: 20px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #111;
-        }
+  <style>
+    :root {
+      /* Georgia Tech Core Brand */
+      --gt-navy: #003057;
+      --gt-navy-dark: #001f38;
+      --gt-navy-light: #0a467b;
+      --gt-gold: #B3A369;
+      --gt-gold-bright: #EAAA00;
+      --gt-gold-hover: #d19500;
+      --gt-gold-tint: #fef8e7;
 
-        .impact-list {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-        .impact-list li {
-            padding: 12px 16px;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            line-height: 1.5;
-        }
-        .impact-list li span.icon {
-            font-size: 22px;
-            line-height: 1;
-        }
+      /* Warm Hispanic Cultural Accents */
+      --terracotta: #D95338;
+      --terracotta-dark: #b83e25;
+      --terracotta-light: #fff0ed;
+      --teal: #0E7C7B;
+      --teal-dark: #095958;
+      --teal-light: #e6f6f6;
+      --amber: #F59E0B;
+      --amber-light: #fef3c7;
 
-        .donation-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 30px;
-        }
-        .progress-text {
-            font-size: 24px;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
-        .progress-subtext {
-            color: #666;
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
-        .progress-bar-bg {
-            background: #e5e5e5;
-            height: 6px;
-            border-radius: 3px;
-            margin-bottom: 25px;
-            overflow: hidden;
-        }
-        .progress-bar-fill {
-            background: #02a95c;
-            height: 100%;
-            border-radius: 3px;
-            width: 45%;
-        }
-        
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 16px;
-            border-radius: 8px;
-            border: none;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-bottom: 12px;
-            text-align: center;
-            text-decoration: none;
-            box-sizing: border-box;
-            transition: all 0.2s ease;
-        }
-        .btn-donate {
-            background: linear-gradient(180deg, #ffde00 0%, #ffc600 100%);
-            color: #333;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .btn-donate:hover {
-            background: linear-gradient(180deg, #ffc600 0%, #ffb300 100%);
-        }
-        .btn-share {
-            background: #fff;
-            border: 1px solid #ccc;
-            color: #333;
-        }
-        .btn-share:hover {
-            border-color: #333;
-        }
+      /* Neutrals & Surfaces */
+      --bg-page: #FAF9F6;
+      --bg-card: #FFFFFF;
+      --bg-muted: #F3F4F6;
+      --border: #E5E7EB;
+      --border-focus: #003057;
+      --text-main: #111827;
+      --text-muted: #4B5563;
+      --text-light: #6B7280;
+      --white: #FFFFFF;
 
-        .recent-donations {
-            margin-top: 25px;
-            border-top: 1px solid #e5e5e5;
-            padding-top: 20px;
-        }
-        .recent-donations h3 {
-            font-size: 16px;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-        .donation-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-        }
-        .donation-icon {
-            width: 32px;
-            height: 32px;
-            background: #f0f0f0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            color: #888;
-        }
-        .donation-details {
-            font-size: 14px;
-        }
-        .donation-name {
-            font-weight: bold;
-        }
-        .donation-amount {
-            color: #666;
-        }
+      /* Shadows & Radii */
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 2px 8px rgba(0, 48, 87, 0.06);
+      --shadow-md: 0 8px 24px rgba(0, 48, 87, 0.09);
+      --shadow-lg: 0 16px 40px rgba(0, 48, 87, 0.12);
+      --shadow-warm: 0 12px 30px rgba(217, 83, 56, 0.18);
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                margin: 20px auto;
-            }
-            .donation-card {
-                position: static;
-                margin-top: 20px;
-            }
-        }
-    </style>
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--gt-navy);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Announcement Bar */
+    .top-bar {
+      background: linear-gradient(90deg, var(--gt-navy-dark) 0%, var(--gt-navy) 60%, #083c66 100%);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 7px 16px;
+      text-align: center;
+      font-weight: 500;
+      border-bottom: 2px solid var(--gt-gold-bright);
+    }
+    .top-bar span.badge {
+      background: var(--gt-gold-bright);
+      color: var(--gt-navy-dark);
+      padding: 2px 9px;
+      border-radius: var(--radius-full);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-right: 8px;
+      text-transform: uppercase;
+    }
+    .top-bar a {
+      color: var(--gt-gold-bright);
+      text-decoration: underline;
+      font-weight: 600;
+      margin-left: 6px;
+    }
+    .top-bar a:hover {
+      color: #fff;
+    }
+
+    /* Sticky Navigation Header */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0, 48, 87, 0.08);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 76px;
+    }
+
+    /* Brand Logo */
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-crest {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--gt-navy) 0%, var(--gt-navy-light) 100%);
+      border: 2px solid var(--gt-gold-bright);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gt-gold-bright);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 10px rgba(0, 48, 87, 0.2);
+    }
+    .brand-names {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--gt-navy);
+      letter-spacing: -0.2px;
+      line-height: 1.1;
+    }
+    .brand-title span {
+      color: var(--terracotta);
+    }
+    .brand-sub {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.2px;
+    }
+
+    /* Desktop Navigation Links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links li a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--gt-navy);
+      position: relative;
+      padding: 6px 0;
+    }
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--gt-gold-bright);
+      transition: width 0.2s ease;
+    }
+    .nav-links li a:hover::after,
+    .nav-links li a.active::after {
+      width: 100%;
+    }
+
+    /* Action Buttons */
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: var(--transition);
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .btn-donate-nav {
+      background: var(--gt-gold-bright);
+      color: var(--gt-navy-dark);
+      box-shadow: 0 4px 14px rgba(234, 170, 0, 0.35);
+    }
+    .btn-donate-nav:hover {
+      background: var(--gt-gold-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(234, 170, 0, 0.45);
+      color: #000;
+    }
+    .btn-primary {
+      background: var(--gt-navy);
+      color: #fff;
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-primary:hover {
+      background: var(--gt-navy-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .btn-gold {
+      background: var(--gt-gold-bright);
+      color: var(--gt-navy-dark);
+      box-shadow: 0 4px 14px rgba(234, 170, 0, 0.35);
+    }
+    .btn-gold:hover {
+      background: var(--gt-gold-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(234, 170, 0, 0.45);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--gt-navy);
+      color: var(--gt-navy);
+    }
+    .btn-outline:hover {
+      background: var(--gt-navy);
+      color: #fff;
+    }
+    .btn-outline-white {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    .btn-outline-white:hover {
+      background: #fff;
+      color: var(--gt-navy);
+    }
+    .btn-terracotta {
+      background: var(--terracotta);
+      color: #fff;
+      box-shadow: var(--shadow-warm);
+    }
+    .btn-terracotta:hover {
+      background: var(--terracotta-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Hamburger Menu Toggle */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      padding: 8px;
+      color: var(--gt-navy);
+      position: relative;
+    }
+    .hamburger-icon {
+      width: 24px;
+      height: 20px;
+      position: relative;
+      margin: 0 auto;
+    }
+    .hamburger-icon span {
+      display: block;
+      position: absolute;
+      height: 2.5px;
+      width: 100%;
+      background: var(--gt-navy);
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+    .hamburger-icon span:nth-child(1) { top: 0px; }
+    .hamburger-icon span:nth-child(2) { top: 8px; }
+    .hamburger-icon span:nth-child(3) { top: 16px; }
+
+    .mobile-menu-btn.open .hamburger-icon span:nth-child(1) {
+      top: 8px;
+      transform: rotate(135deg);
+    }
+    .mobile-menu-btn.open .hamburger-icon span:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+    .mobile-menu-btn.open .hamburger-icon span:nth-child(3) {
+      top: 8px;
+      transform: rotate(-135deg);
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 107px; /* top bar + header */
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(16px);
+      z-index: 999;
+      padding: 30px 24px;
+      flex-direction: column;
+      overflow-y: auto;
+      border-top: 1px solid var(--border);
+      animation: fadeIn 0.25s ease-out forwards;
+    }
+    .mobile-drawer.open {
+      display: flex;
+    }
+    .mobile-drawer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .mobile-drawer-links a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gt-navy);
+      display: block;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 48, 87, 0.08);
+    }
+    .mobile-drawer-links a:hover {
+      color: var(--terracotta);
+      padding-left: 6px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section Global Headers */
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 52px auto;
+    }
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--terracotta);
+      background: var(--terracotta-light);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      color: var(--gt-navy);
+    }
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      position: relative;
+      padding: 48px 0 72px 0;
+      overflow: hidden;
+      background: radial-gradient(circle at 85% 15%, rgba(234, 170, 0, 0.09) 0%, rgba(250, 249, 246, 0) 60%),
+                  radial-gradient(circle at 15% 85%, rgba(217, 83, 56, 0.08) 0%, rgba(250, 249, 246, 0) 50%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .hero-badge-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .badge-gt {
+      background: rgba(0, 48, 87, 0.08);
+      color: var(--gt-navy);
+      border: 1px solid rgba(0, 48, 87, 0.15);
+    }
+    .badge-cultura {
+      background: var(--gt-gold-tint);
+      color: #8b6700;
+      border: 1px solid rgba(234, 170, 0, 0.3);
+    }
+    .hero-headline {
+      font-size: 3.25rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: var(--gt-navy);
+      line-height: 1.12;
+    }
+    .hero-headline .highlight-accent {
+      background: linear-gradient(120deg, var(--terracotta) 0%, #eb684b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .hero-subtitle strong {
+      color: var(--gt-navy);
+      font-weight: 600;
+    }
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .hero-ctas .btn {
+      padding: 14px 28px;
+      font-size: 1.05rem;
+    }
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      color: var(--text-light);
+      font-size: 0.88rem;
+    }
+    .hero-trust-avatars {
+      display: flex;
+      align-items: center;
+    }
+    .trust-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin-left: -8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.7rem;
+      color: #fff;
+    }
+    .trust-avatar:first-child { margin-left: 0; }
+
+    /* DYNAMIC PHOTO CAROUSEL */
+    .carousel-container {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid #fff;
+      background: var(--gt-navy-dark);
+      aspect-ratio: 4 / 3;
+    }
+    .carousel-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s ease-out;
+      transform: scale(1.04);
+    }
+    .carousel-slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .carousel-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 48, 87, 0.1) 0%, rgba(0, 31, 56, 0.88) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 30px;
+      color: #fff;
+    }
+    .slide-tag {
+      align-self: flex-start;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: var(--gt-gold-bright);
+      color: var(--gt-navy-dark);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      margin-bottom: 8px;
+    }
+    .slide-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .slide-desc {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 90%;
+    }
+
+    /* Carousel Nav Arrows */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.85);
+      border: none;
+      border-radius: 50%;
+      color: var(--gt-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    .carousel-btn:hover {
+      background: #fff;
+      transform: translateY(-50%) scale(1.1);
+      color: var(--terracotta);
+    }
+    .carousel-prev { left: 16px; }
+    .carousel-next { right: 16px; }
+
+    /* Carousel Indicators */
+    .carousel-dots {
+      position: absolute;
+      bottom: 14px;
+      right: 24px;
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .dot.active {
+      width: 28px;
+      border-radius: 12px;
+      background: var(--gt-gold-bright);
+    }
+
+    /* STATS & IMPACT COUNTER SECTION */
+    .stats-section {
+      padding: 60px 0;
+      background: #fff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      box-shadow: inset 0 2px 6px rgba(0, 48, 87, 0.02);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+    .stat-card {
+      padding: 24px 16px;
+      border-radius: var(--radius-md);
+      background: var(--bg-page);
+      border: 1px solid rgba(0, 48, 87, 0.06);
+      transition: var(--transition);
+    }
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(234, 170, 0, 0.4);
+    }
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--gt-gold-tint);
+      color: #997819;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+    .stat-number {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--gt-navy);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-number span.plus {
+      color: var(--terracotta);
+    }
+    .stat-label {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .stat-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ABOUT US SECTION */
+    .about-section {
+      padding: 100px 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-story {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .about-story p {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .about-story strong {
+      color: var(--gt-navy);
+    }
+    .about-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .pillar-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      background: #fff;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .pillar-card:hover {
+      border-color: var(--teal);
+      transform: translateX(6px);
+      box-shadow: var(--shadow-md);
+    }
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--teal-light);
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .pillar-icon.gold {
+      background: var(--gt-gold-tint);
+      color: #997819;
+    }
+    .pillar-icon.terra {
+      background: var(--terracotta-light);
+      color: var(--terracotta);
+    }
+    .pillar-content h4 {
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+    .pillar-content p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+    .about-visual-main {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid #fff;
+      aspect-ratio: 4 / 3;
+    }
+    .about-visual-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about-visual-badge {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      background: #fff;
+      padding: 20px 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      border-left: 5px solid var(--terracotta);
+      max-width: 260px;
+    }
+    .about-visual-badge h5 {
+      font-size: 1.1rem;
+      color: var(--gt-navy);
+      margin-bottom: 4px;
+    }
+    .about-visual-badge p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* EVENTS & CULTURAL CALENDAR */
+    .events-section {
+      padding: 100px 0;
+      background: #fff;
+      border-top: 1px solid var(--border);
+    }
+    .events-filter {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .filter-btn {
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn:hover {
+      border-color: var(--gt-navy);
+      color: var(--gt-navy);
+    }
+    .filter-btn.active {
+      background: var(--gt-navy);
+      color: #fff;
+      border-color: var(--gt-navy);
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+    .event-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .event-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(0, 48, 87, 0.2);
+    }
+    .event-img-wrap {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      background: var(--gt-navy-dark);
+    }
+    .event-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .event-card:hover .event-img-wrap img {
+      transform: scale(1.06);
+    }
+    .event-type-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      background: rgba(0, 31, 56, 0.85);
+      color: #fff;
+      backdrop-filter: blur(8px);
+    }
+    .event-date-chip {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background: #fff;
+      border-radius: var(--radius-sm);
+      padding: 6px 12px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      font-family: 'Outfit', sans-serif;
+      line-height: 1.1;
+    }
+    .chip-month {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--terracotta);
+    }
+    .chip-day {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--gt-navy);
+    }
+
+    .event-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .event-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--gt-navy);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .event-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+      font-size: 0.88rem;
+      color: var(--text-light);
+    }
+    .meta-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .meta-row svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gt-gold-bright);
+      flex-shrink: 0;
+    }
+    .event-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .event-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+    .event-actions .btn {
+      flex: 1;
+      font-size: 0.85rem;
+      padding: 8px 14px;
+    }
+
+    /* INITIATIVES & STUDENT SUPPORT */
+    .programs-section {
+      padding: 100px 0;
+      background: var(--bg-page);
+    }
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .program-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 36px 28px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .program-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gt-navy);
+      transition: var(--transition);
+    }
+    .program-card:nth-child(1)::before { background: var(--gt-gold-bright); }
+    .program-card:nth-child(2)::before { background: var(--teal); }
+    .program-card:nth-child(3)::before { background: var(--terracotta); }
+
+    .program-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .program-icon-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      margin-bottom: 22px;
+    }
+    .icon-gold { background: var(--gt-gold-tint); color: #997819; }
+    .icon-teal { background: var(--teal-light); color: var(--teal); }
+    .icon-terra { background: var(--terracotta-light); color: var(--terracotta); }
+
+    .program-card h3 {
+      font-size: 1.45rem;
+      color: var(--gt-navy);
+      margin-bottom: 12px;
+    }
+    .program-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .program-tag-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-size: 0.88rem;
+    }
+    .program-tag-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+    .program-tag-list li span.bullet {
+      color: var(--gt-gold-bright);
+      font-weight: 800;
+    }
+
+    /* LEADERSHIP SECTION */
+    .leadership-section {
+      padding: 100px 0;
+      background: #fff;
+      border-top: 1px solid var(--border);
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+    .team-card {
+      text-align: center;
+      padding: 28px 20px;
+      border-radius: var(--radius-md);
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(0, 48, 87, 0.2);
+    }
+    .team-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 16px auto;
+      background: linear-gradient(135deg, var(--gt-navy) 0%, var(--gt-navy-light) 100%);
+      color: var(--gt-gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      border: 3px solid var(--gt-gold-bright);
+      box-shadow: var(--shadow-sm);
+    }
+    .team-name {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--gt-navy);
+      margin-bottom: 4px;
+    }
+    .team-role {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--terracotta);
+      margin-bottom: 6px;
+    }
+    .team-major {
+      font-size: 0.82rem;
+      color: var(--text-light);
+    }
+
+    /* DONATION BANNER / WHERE YOUR SUPPORT GOES */
+    .donation-banner-section {
+      padding: 110px 0;
+      background: linear-gradient(135deg, #001f38 0%, #003057 60%, #064070 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .donation-banner-section::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(234, 170, 0, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .donation-banner-section::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(217, 83, 56, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .support-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 56px auto;
+      position: relative;
+      z-index: 1;
+    }
+    .support-header .section-eyebrow {
+      background: rgba(234, 170, 0, 0.15);
+      color: var(--gt-gold-bright);
+      border: 1px solid rgba(234, 170, 0, 0.3);
+    }
+    .support-header h2 {
+      color: #fff;
+      font-size: 2.75rem;
+      margin-bottom: 16px;
+    }
+    .support-header p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .transparency-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 56px;
+      position: relative;
+      z-index: 1;
+    }
+    .transparency-card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .transparency-card:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-6px);
+      border-color: var(--gt-gold-bright);
+    }
+    .transparency-icon {
+      font-size: 2.2rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .transparency-card h4 {
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .transparency-card p {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.45;
+    }
+
+    .support-cta-box {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(234, 170, 0, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .support-cta-box h3 {
+      font-size: 1.8rem;
+      color: var(--gt-gold-bright);
+      margin-bottom: 12px;
+    }
+    .support-cta-box p {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 28px;
+    }
+    .support-cta-box .btn {
+      padding: 16px 36px;
+      font-size: 1.15rem;
+    }
+
+    /* GET INVOLVED SECTION */
+    .involve-section {
+      padding: 100px 0;
+      background: var(--bg-page);
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+    .step-card {
+      background: #fff;
+      padding: 36px 28px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: var(--transition);
+    }
+    .step-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gt-navy);
+    }
+    .step-num {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--gt-navy);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .step-card:nth-child(1) .step-num { background: var(--gt-gold-bright); color: var(--gt-navy); }
+    .step-card:nth-child(2) .step-num { background: var(--teal); }
+    .step-card:nth-child(3) .step-num { background: var(--terracotta); }
+
+    .step-card h3 {
+      font-size: 1.35rem;
+      color: var(--gt-navy);
+      margin-bottom: 10px;
+    }
+    .step-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Quick Community Sign Up Card */
+    .community-box {
+      background: linear-gradient(135deg, #fff 0%, var(--gt-gold-tint) 100%);
+      border: 2px solid var(--gt-gold-bright);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      box-shadow: var(--shadow-md);
+    }
+    .community-box-content h3 {
+      font-size: 1.8rem;
+      color: var(--gt-navy);
+      margin-bottom: 8px;
+    }
+    .community-box-content p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+    .community-box-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      background: var(--gt-navy-dark);
+      color: #fff;
+      padding: 80px 0 30px 0;
+      border-top: 4px solid var(--gt-gold-bright);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      margin-bottom: 60px;
+    }
+    .footer-brand h3 {
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      max-width: 360px;
+    }
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      transition: var(--transition);
+    }
+    .social-btn:hover {
+      background: var(--gt-gold-bright);
+      color: var(--gt-navy-dark);
+      transform: translateY(-3px);
+    }
+    .footer-col h4 {
+      font-size: 1.1rem;
+      color: var(--gt-gold-bright);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 0.92rem;
+    }
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    .footer-links a:hover {
+      color: var(--gt-gold-bright);
+      padding-left: 4px;
+    }
+    .footer-contact-info {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.7;
+    }
+    .footer-contact-info a {
+      color: var(--gt-gold-bright);
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.5;
+    }
+    .footer-disclaimer {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--gt-gold-bright);
+    }
+
+    /* Interactive RSVP / Sign Up Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 31, 56, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: fadeIn 0.2s ease-out forwards;
+    }
+    .modal-backdrop.active {
+      display: flex;
+    }
+    .modal-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      max-width: 520px;
+      width: 100%;
+      padding: 36px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-light);
+      cursor: pointer;
+      line-height: 1;
+    }
+    .modal-close-btn:hover {
+      color: var(--text-main);
+    }
+    .modal-card h3 {
+      font-size: 1.6rem;
+      color: var(--gt-navy);
+      margin-bottom: 8px;
+    }
+    .modal-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .form-field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gt-navy);
+      margin-bottom: 6px;
+    }
+    .form-field input, .form-field select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: var(--transition);
+    }
+    .form-field input:focus, .form-field select:focus {
+      border-color: var(--gt-navy);
+      box-shadow: 0 0 0 3px rgba(0, 48, 87, 0.1);
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      .hero-headline { font-size: 2.75rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .programs-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .transparency-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-visual { max-width: 580px; margin: 0 auto; }
+    }
+
+    @media (max-width: 840px) {
+      .nav-links, .nav-cta .btn-outline { display: none; }
+      .mobile-menu-btn { display: block; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .carousel-container { aspect-ratio: 16 / 10; }
+      .hero-headline { font-size: 2.3rem; }
+      .section-title { font-size: 2rem; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .community-box { flex-direction: column; text-align: center; }
+      .community-box-actions { flex-direction: column; width: 100%; }
+      .community-box-actions .btn { width: 100%; }
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 16px; }
+      .hero-section { padding: 32px 0 54px 0; }
+      .hero-headline { font-size: 1.95rem; }
+      .hero-subtitle { font-size: 1.05rem; }
+      .hero-ctas { flex-direction: column; width: 100%; }
+      .hero-ctas .btn { width: 100%; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .transparency-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .about-visual-badge { position: static; margin-top: 16px; max-width: 100%; }
+      .support-header h2 { font-size: 2.1rem; }
+      .modal-card { padding: 24px; }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">GoFundMe</a>
-        <div class="nav-links">
-            <a href="#">Search</a>
-            <a href="#">Sign In</a>
-        </div>
-    </header>
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span class="badge">GT SSO Community</span>
+    Weekly Conversation Tables every Wednesday &amp; Thursday at the Student Center! 
+    <a href="#events">View Fall Schedule &rarr;</a>
+  </div>
 
+  <!-- Sticky Header & Navigation -->
+  <header class="site-header" id="navbar">
     <div class="container">
+      <div class="nav-wrapper">
         
-        <div class="main-col">
-            <div class="org-badge">Georgia Tech • Spanish Speaking Organization</div>
-            <h1 class="title">Cada fiesta, cada beca, cada bienvenida, gracias a ustedes.</h1>
-            
-            <img class="hero-img" src="https://www.njea.org/wp-content/uploads/2022/08/hisp.jpg" alt="GT SSO Community and Celebration">
-            
-            <div class="organizer">
-                <div class="avatar">GT</div>
-                <div class="organizer-text">
-                    <strong>Georgia Tech Spanish Speaking Organization (GT SSO)</strong>
-                    Student Organization Fundraiser • Atlanta, GA
-                </div>
-            </div>
+        <!-- Brand Logo -->
+        <a href="#hero" class="brand-logo" aria-label="GT SSO Home">
+          <div class="brand-crest">SSO</div>
+          <div class="brand-names">
+            <div class="brand-title">GT <span>SSO</span></div>
+            <div class="brand-sub">Spanish Speaking Organization • Georgia Tech</div>
+          </div>
+        </a>
 
-            <div class="story">
-                <p><strong>Estimados miembros de GT SSO,</strong></p>
-                <p>Last semester, GT SSO brought together over 300 students for Noche de Salsa, our Día de los Muertos altar exhibit in the Student Center, and weekly conversation tables that turned strangers into a <em>familia</em>. And none of it would be possible without members like you.</p>
-                
-                <p>As we plan for Hispanic Heritage Month and next spring's scholarship fund, we're asking members to consider a small donation to help cover venue costs, performer honorariums, and supplies for our cultural events.</p>
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#events">Events &amp; Calendar</a></li>
+          <li><a href="#programs">Programs &amp; Initiatives</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#get-involved">Get Involved</a></li>
+        </ul>
 
-                <h3>Where your donation goes:</h3>
-                <ul class="impact-list">
-                    <li>
-                        <span class="icon">🎉</span>
-                        <div><strong>Cultural events:</strong> Noche de Salsa, Día de los Muertos, Carnaval night</div>
-                    </li>
-                    <li>
-                        <span class="icon">🎓</span>
-                        <div><strong>The GT SSO scholarship fund:</strong> for study-abroad members</div>
-                    </li>
-                    <li>
-                        <span class="icon">🍳</span>
-                        <div><strong>Weekly tables:</strong> Free food and supplies at weekly conversation practice tables across campus</div>
-                    </li>
-                    <li>
-                        <span class="icon">🏆</span>
-                        <div><strong>Conference delegation:</strong> Travel support for our delegation to the regional LSA conference</div>
-                    </li>
-                </ul>
+        <!-- Right Call to Action -->
+        <div class="nav-cta">
+          <a href="donate.html" class="btn btn-donate-nav">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            Donate / Support Us
+          </a>
+
+          <!-- Hamburger Button for Mobile -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
+          </button>
         </div>
 
-        <div class="side-col">
-            <div class="donation-card">
-                <div class="progress-text">$1,850 <span style="font-weight: normal; font-size: 16px; color: #666;">raised of $5,000 goal</span></div>
-                <div class="progress-subtext">34 donations</div>
-                
-                <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: 37%;"></div>
-                </div>
+      </div>
+    </div>
+  </header>
 
-                <a href="donate.html" class="btn btn-donate">Donate now</a>
-                <a href="#" class="btn btn-share" onclick="navigator.clipboard.writeText(window.location.href); alert('Fundraiser link copied to clipboard!'); return false;">Share</a>
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-drawer-links">
+      <li><a href="#about" class="mobile-link">About Us</a></li>
+      <li><a href="#events" class="mobile-link">Events &amp; Cultural Calendar</a></li>
+      <li><a href="#programs" class="mobile-link">Programs &amp; Initiatives</a></li>
+      <li><a href="#leadership" class="mobile-link">Executive Leadership</a></li>
+      <li><a href="#get-involved" class="mobile-link">Get Involved</a></li>
+    </ul>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a href="#get-involved" class="btn btn-primary mobile-link" style="width: 100%;">Join GT SSO</a>
+      <a href="donate.html" class="btn btn-donate-nav" style="width: 100%;">Donate / Support Us</a>
+    </div>
+  </div>
 
-                <div class="recent-donations">
-                    <h3>Recent Supporters</h3>
-                    
-                    <div class="donation-item">
-                        <div class="donation-icon">🐝</div>
-                        <div class="donation-details">
-                            <div class="donation-name">Mateo S.</div>
-                            <div class="donation-amount">$50 • 2 hrs ago</div>
-                        </div>
-                    </div>
-                    
-                    <div class="donation-item">
-                        <div class="donation-icon">🐝</div>
-                        <div class="donation-details">
-                            <div class="donation-name">Anonymous Yellow Jacket</div>
-                            <div class="donation-amount">$25 • 4 hrs ago</div>
-                        </div>
-                    </div>
+  <main>
 
-                    <div class="donation-item">
-                        <div class="donation-icon">🐝</div>
-                        <div class="donation-details">
-                            <div class="donation-name">Elena Gomez</div>
-                            <div class="donation-amount">$100 • 1 day ago</div>
-                        </div>
-                    </div>
-
-                </div>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Hero Text -->
+          <div class="hero-content">
+            <div class="hero-badge-group">
+              <span class="hero-badge badge-gt">Georgia Institute of Technology</span>
+              <span class="hero-badge badge-cultura">Comunidad • Cultura • Éxito</span>
             </div>
+
+            <h1 class="hero-headline">
+              &ldquo;Cada fiesta, <span class="highlight-accent">cada beca,</span> cada bienvenida.&rdquo;
+            </h1>
+
+            <p class="hero-subtitle">
+              Empowering, educating, and building <strong>familia</strong> for the Hispanic, Latinx, and Spanish-speaking community at Georgia Tech.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#get-involved" class="btn btn-primary">
+                Join GT SSO
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="donate.html" class="btn btn-gold">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                Support Our Mission
+              </a>
+            </div>
+
+            <div class="hero-trust">
+              <div class="hero-trust-avatars">
+                <div class="trust-avatar" style="background:#003057;">GT</div>
+                <div class="trust-avatar" style="background:#B3A369;">SSO</div>
+                <div class="trust-avatar" style="background:#D95338;">🐝</div>
+              </div>
+              <div>
+                <strong>Over 300+ Yellow Jackets</strong> united across campus every semester.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Dynamic Photo Carousel -->
+          <div class="carousel-container" id="heroCarousel" aria-label="Campus event highlights slideshow">
+            <div class="carousel-track">
+
+              <!-- Slide 1: Noche de Salsa -->
+              <div class="carousel-slide active" data-index="0">
+                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80" alt="Students dancing at GT SSO Noche de Salsa gala" loading="eager">
+                <div class="carousel-overlay">
+                  <span class="slide-tag">Annual Marquee Gala</span>
+                  <div class="slide-title">Noche de Salsa</div>
+                  <p class="slide-desc">Campus-wide live Latin orchestra, dance workshops, and cultural immersion at the Exhibition Hall.</p>
+                </div>
+              </div>
+
+              <!-- Slide 2: Día de los Muertos -->
+              <div class="carousel-slide" data-index="1">
+                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80" alt="Día de los Muertos Altar Exhibit with marigolds and ofrendas" loading="lazy">
+                <div class="carousel-overlay">
+                  <span class="slide-tag">Cultural Tradition</span>
+                  <div class="slide-title">Día de los Muertos Altar</div>
+                  <p class="slide-desc">Traditional community ofrenda, cempasúchil flowers, and remembrance in the John Lewis Student Center.</p>
+                </div>
+              </div>
+
+              <!-- Slide 3: Weekly Conversation Tables -->
+              <div class="carousel-slide" data-index="2">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Georgia Tech students practicing Spanish over coffee" loading="lazy">
+                <div class="carousel-overlay">
+                  <span class="slide-tag">Every Week Across Campus</span>
+                  <div class="slide-title">Mesas de Conversación</div>
+                  <p class="slide-desc">Free café, empanadas, and lively Spanish practice welcoming all fluency levels.</p>
+                </div>
+              </div>
+
+              <!-- Slide 4: Carnaval & Heritage Celebrations -->
+              <div class="carousel-slide" data-index="3">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="Carnaval night and Hispanic Heritage Month celebration on Tech Green" loading="lazy">
+                <div class="carousel-overlay">
+                  <span class="slide-tag">Hispanic Heritage Month</span>
+                  <div class="slide-title">Carnaval on Tech Green</div>
+                  <p class="slide-desc">Folklore rhythms, culinary tastings, and regional pride uniting students from all backgrounds.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous slide">&larr;</button>
+            <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next slide">&rarr;</button>
+
+            <!-- Dots -->
+            <div class="carousel-dots" id="carouselDots">
+              <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+              <button class="dot" data-index="1" aria-label="Slide 2"></button>
+              <button class="dot" data-index="2" aria-label="Slide 3"></button>
+              <button class="dot" data-index="3" aria-label="Slide 4"></button>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
+
+    <!-- KEY IMPACT METRICS COUNTER -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          
+          <div class="stat-card">
+            <div class="stat-icon">🎉</div>
+            <div class="stat-number"><span class="counter" data-target="300">0</span><span class="plus">+</span></div>
+            <div class="stat-label">Active Event Attendees</div>
+            <div class="stat-desc">Joining our galas, workshops, and campus cultural immersions every academic year.</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">☕</div>
+            <div class="stat-number"><span class="counter" data-target="24">0</span><span class="plus">+</span></div>
+            <div class="stat-label">Weekly Conversation Tables</div>
+            <div class="stat-desc">Providing warm Spanish conversation practice, free food, and fellowship across campus.</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🎓</div>
+            <div class="stat-number">$<span class="counter" data-target="5000">0</span><span class="plus">+</span></div>
+            <div class="stat-label">Study-Abroad Scholarships</div>
+            <div class="stat-desc">Subsidizing language immersion and international academic travel for GT students.</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-number"><span class="counter" data-target="15">0</span><span class="plus">+</span></div>
+            <div class="stat-label">Conference Delegations</div>
+            <div class="stat-desc">Student delegates funded to attend national Hispanic &amp; Latinx collegiate leadership summits.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          
+          <!-- Story & Mission -->
+          <div class="about-story">
+            <div class="section-eyebrow">
+              <span>Nuestra Misión</span>
+            </div>
+            <h2 class="section-title">A Home Away from Home for Every Yellow Jacket</h2>
+            <p>
+              Founded at the Georgia Institute of Technology, the <strong>Spanish Speaking Organization (GT SSO)</strong> bridges cultures, fosters bilingual fluency, and provides an authentic <em>familia</em> for native speakers, heritage learners, and Spanish enthusiasts alike.
+            </p>
+            <p>
+              Whether you are an engineering student preparing for international co-ops, an international student missing mom's home cooking, or looking to connect with Atlanta's thriving Hispanic heritage, GT SSO creates the community and academic support where you can thrive.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar-card">
+                <div class="pillar-icon terra">🤝</div>
+                <div class="pillar-content">
+                  <h4>Familia &amp; Belonging</h4>
+                  <p>Weekly gatherings, mentorship pairings, and shared traditions that make a 16,000-student campus feel like home.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon gold">🎨</div>
+                <div class="pillar-content">
+                  <h4>Cultural Celebration</h4>
+                  <p>Showcasing the vibrant richness of Latin America and Spain through dance, music, history, and food.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">🚀</div>
+                <div class="pillar-content">
+                  <h4>Academic &amp; Career Leadership</h4>
+                  <p>Study-abroad scholarships, resume critiques, alumni networking, and professional conference sponsorships.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Side -->
+          <div class="about-visual">
+            <div class="about-visual-main">
+              <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1000&q=80" alt="GT SSO students gathering together in camaraderie">
+            </div>
+            <div class="about-visual-badge">
+              <h5>Official GT Student Org</h5>
+              <p>Recognized student organization based at the John Lewis Student Center in Atlanta, Georgia.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS & CULTURAL CALENDAR -->
+    <section class="events-section" id="events">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>Calendario Cultural</span>
+          </div>
+          <h2 class="section-title">Upcoming Events &amp; Traditions</h2>
+          <p class="section-subtitle">
+            From our signature salsa night to weekly conversation tables with free empanadas, explore our events and RSVP to be part of the celebration.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="events-filter">
+          <button class="filter-btn active" data-filter="all">All Events</button>
+          <button class="filter-btn" data-filter="weekly">Weekly Tables</button>
+          <button class="filter-btn" data-filter="marquee">Marquee Celebrations</button>
+          <button class="filter-btn" data-filter="cultural">Cultural Exhibits</button>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-grid">
+
+          <!-- Event 1: Weekly Tables -->
+          <div class="event-card" data-category="weekly">
+            <div class="event-img-wrap">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Weekly conversation tables with coffee and empanadas">
+              <span class="event-type-badge">Weekly Practice</span>
+              <div class="event-date-chip">
+                <div class="chip-month">Every</div>
+                <div class="chip-day">WED</div>
+              </div>
+            </div>
+            <div class="event-body">
+              <h3 class="event-title">Weekly Spanish Conversation Tables</h3>
+              <div class="event-meta">
+                <div class="meta-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Wednesdays &bull; 6:00 PM – 7:30 PM</span>
+                </div>
+                <div class="meta-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Student Center 2nd Floor (Atrium Lounge)</span>
+                </div>
+              </div>
+              <p class="event-desc">
+                Informal Spanish conversational practice for beginners, heritage speakers, and native speakers alike. Enjoy complimentary hot café, tea, and warm pastries!
+              </p>
+              <div class="event-actions">
+                <button class="btn btn-outline rsvp-trigger" data-event="Weekly Spanish Conversation Tables">RSVP / Remind Me</button>
+                <button class="btn btn-primary cal-trigger" data-title="GT SSO Weekly Conversation Table" data-location="Student Center Atrium Lounge" data-desc="Weekly Spanish practice table with free refreshments.">Add to Calendar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2: Noche de Salsa -->
+          <div class="event-card" data-category="marquee">
+            <div class="event-img-wrap">
+              <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=800&q=80" alt="Noche de salsa dancers on stage">
+              <span class="event-type-badge">Annual Marquee Gala</span>
+              <div class="event-date-chip">
+                <div class="chip-month">OCT</div>
+                <div class="chip-day">18</div>
+              </div>
+            </div>
+            <div class="event-body">
+              <h3 class="event-title">Noche de Salsa: Campus Gala</h3>
+              <div class="event-meta">
+                <div class="meta-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Friday &bull; 7:00 PM – 11:00 PM</span>
+                </div>
+                <div class="meta-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Georgia Tech Exhibition Hall Ballroom</span>
+                </div>
+              </div>
+              <p class="event-desc">
+                Our most celebrated evening of the year! Live 8-piece salsa orchestra, beginner dance lesson from 7:00-8:00 PM, authentic Latin cuisine catering, and social dancing.
+              </p>
+              <div class="event-actions">
+                <button class="btn btn-terracotta rsvp-trigger" data-event="Noche de Salsa Gala">RSVP for Gala</button>
+                <button class="btn btn-outline cal-trigger" data-title="GT SSO Noche de Salsa Gala" data-location="Exhibition Hall Ballroom" data-desc="Annual campus-wide Latin dance gala with live orchestra.">Add to Calendar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3: Día de los Muertos -->
+          <div class="event-card" data-category="cultural">
+            <div class="event-img-wrap">
+              <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80" alt="Community altar exhibit for Día de los Muertos">
+              <span class="event-type-badge">Cultural Exhibit</span>
+              <div class="event-date-chip">
+                <div class="chip-month">NOV</div>
+                <div class="chip-day">01</div>
+              </div>
+            </div>
+            <div class="event-body">
+              <h3 class="event-title">Día de los Muertos Altar Exhibit</h3>
+              <div class="event-meta">
+                <div class="meta-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>All Day Exhibit &bull; Evening Ceremony 6 PM</span>
+                </div>
+                <div class="meta-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>John Lewis Student Center Atrium</span>
+                </div>
+              </div>
+              <p class="event-desc">
+                An authentic multi-tier ofrenda honoring ancestors and lost loved ones. Campus members are invited to submit photos, light electric candles, and taste freshly baked Pan de Muerto.
+              </p>
+              <div class="event-actions">
+                <button class="btn btn-outline rsvp-trigger" data-event="Día de los Muertos Altar Exhibit">Contribute to Altar</button>
+                <button class="btn btn-primary cal-trigger" data-title="GT SSO Día de los Muertos Altar" data-location="Student Center Atrium" data-desc="Día de los Muertos community altar exhibit and pan de muerto tasting.">Add to Calendar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4: Carnaval Night -->
+          <div class="event-card" data-category="marquee">
+            <div class="event-img-wrap">
+              <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80" alt="Carnaval celebration on campus">
+              <span class="event-type-badge">Hispanic Heritage</span>
+              <div class="event-date-chip">
+                <div class="chip-month">SEP</div>
+                <div class="chip-day">26</div>
+              </div>
+            </div>
+            <div class="event-body">
+              <h3 class="event-title">Carnaval Night &amp; Heritage Fiesta</h3>
+              <div class="event-meta">
+                <div class="meta-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Thursday &bull; 5:30 PM – 9:00 PM</span>
+                </div>
+                <div class="meta-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Tech Green &amp; Kessler Campanile</span>
+                </div>
+              </div>
+              <p class="event-desc">
+                Kick off Hispanic Heritage Month outdoors on Tech Green! Featuring Caribbean drumming, folkloric dancers, taco stands, games, and country-flag exhibits.
+              </p>
+              <div class="event-actions">
+                <button class="btn btn-outline rsvp-trigger" data-event="Carnaval Night Fiesta">RSVP Free</button>
+                <button class="btn btn-primary cal-trigger" data-title="GT SSO Carnaval Night" data-location="Tech Green" data-desc="Carnaval kickoff for Hispanic Heritage Month on Tech Green.">Add to Calendar</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STUDENT SUPPORT & INITIATIVES -->
+    <section class="programs-section" id="programs">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>Iniciativas &amp; Apoyo</span>
+          </div>
+          <h2 class="section-title">Empowering the Next Generation of Hispanic Leaders</h2>
+          <p class="section-subtitle">
+            Beyond cultural celebrations, GT SSO actively invests in academic equity, peer mentorship, and global opportunities for Georgia Tech students.
+          </p>
+        </div>
+
+        <div class="programs-grid">
+          
+          <!-- Pillar 1: Study-Abroad Scholarship -->
+          <div class="program-card">
+            <div class="program-icon-box icon-gold">✈️</div>
+            <h3>GT SSO Study-Abroad Scholarship Fund</h3>
+            <p>
+              Provides direct financial grants to GT undergraduate and graduate students completing language immersion programs in Spain, Mexico, Colombia, and Latin America.
+            </p>
+            <ul class="program-tag-list">
+              <li><span class="bullet">&check;</span> Up to $1,000 per student recipient</li>
+              <li><span class="bullet">&check;</span> Need-aware and merit-evaluated application</li>
+              <li><span class="bullet">&check;</span> Open to all majors across Engineering &amp; Sciences</li>
+            </ul>
+            <a href="donate.html" class="btn btn-outline" style="margin-top: auto;">Support This Fund &rarr;</a>
+          </div>
+
+          <!-- Pillar 2: Peer Mentorship -->
+          <div class="program-card">
+            <div class="program-icon-box icon-teal">👥</div>
+            <h3>Hermano/a Peer Mentorship Program</h3>
+            <p>
+              Pairs incoming first-year and transfer students with experienced upperclassmen mentors to ease the transition to college life, rigorous GT academics, and Atlanta.
+            </p>
+            <ul class="program-tag-list">
+              <li><span class="bullet">&check;</span> 1-on-1 career &amp; course scheduling guidance</li>
+              <li><span class="bullet">&check;</span> Monthly cohort social dinners &amp; study halls</li>
+              <li><span class="bullet">&check;</span> Networking with GT alumni in top tech companies</li>
+            </ul>
+            <a href="#get-involved" class="btn btn-outline" style="margin-top: auto;">Join as Mentee / Mentor &rarr;</a>
+          </div>
+
+          <!-- Pillar 3: Conference Delegations -->
+          <div class="program-card">
+            <div class="program-icon-box icon-terra">🏛️</div>
+            <h3>Regional &amp; National Conference Delegations</h3>
+            <p>
+              Sponsors student travel and registration for major collegiate leadership summits including the regional Hispanic Student Association (HSA) and national STEM conferences.
+            </p>
+            <ul class="program-tag-list">
+              <li><span class="bullet">&check;</span> Full travel &amp; hotel expense assistance</li>
+              <li><span class="bullet">&check;</span> Direct access to Fortune 500 recruiters</li>
+              <li><span class="bullet">&check;</span> Workshops in diversity in tech and entrepreneurship</li>
+            </ul>
+            <a href="donate.html" class="btn btn-outline" style="margin-top: auto;">Sponsor a Delegate &rarr;</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEADERSHIP SECTION -->
+    <section class="leadership-section" id="leadership">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>Mesa Directiva</span>
+          </div>
+          <h2 class="section-title">Executive Leadership Board</h2>
+          <p class="section-subtitle">
+            Dedicated student leaders driving our vision, cultural programming, and campus advocacy forward each semester.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          
+          <div class="team-card">
+            <div class="team-avatar">MG</div>
+            <div class="team-name">Mateo Gomez</div>
+            <div class="team-role">President</div>
+            <div class="team-major">Computer Science '25 &bull; Bogot&aacute; / Atlanta</div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar" style="border-color: var(--terracotta); color: var(--terracotta);">SR</div>
+            <div class="team-name">Sofia Rodriguez</div>
+            <div class="team-role">VP of Cultural Affairs</div>
+            <div class="team-major">Industrial Engineering '26 &bull; San Juan, PR</div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar" style="border-color: var(--teal); color: var(--teal);">DA</div>
+            <div class="team-name">Diego Alvarez</div>
+            <div class="team-role">VP of Finance &amp; Giving</div>
+            <div class="team-major">Mechanical Engineering '25 &bull; Guadalajara, MX</div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">VC</div>
+            <div class="team-name">Valentina Cruz</div>
+            <div class="team-role">Mentorship Coordinator</div>
+            <div class="team-major">Biomedical Engineering '26 &bull; Miami, FL</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DONATION BANNER / WHERE YOUR SUPPORT GOES -->
+    <section class="donation-banner-section" id="support">
+      <div class="container">
+        
+        <div class="support-header">
+          <div class="section-eyebrow">
+            <span>Transparencia &bull; Impacto Directo</span>
+          </div>
+          <h2>Where Your Support Goes</h2>
+          <p>
+            As a student-led 501(c)(3) university organization, 100% of community contributions go directly back into empowering Georgia Tech students and sustaining our cultural traditions.
+          </p>
+        </div>
+
+        <!-- 4 Transparency Breakdown Pillars -->
+        <div class="transparency-grid">
+          
+          <div class="transparency-card">
+            <span class="transparency-icon">🎺</span>
+            <h4>Cultural Performers</h4>
+            <p>Funding live mariachi ensembles, salsa orchestras, and traditional folkloric dance instructors for campus galas.</p>
+          </div>
+
+          <div class="transparency-card">
+            <span class="transparency-icon">🎓</span>
+            <h4>Study-Abroad Grants</h4>
+            <p>Awarding need-based stipends to members undertaking intensive language immersion programs in Spanish-speaking nations.</p>
+          </div>
+
+          <div class="transparency-card">
+            <span class="transparency-icon">🥟</span>
+            <h4>Free Weekly Refreshments</h4>
+            <p>Serving hot café, fresh empanadas, and pan dulce at over 24 weekly conversation tables throughout the school year.</p>
+          </div>
+
+          <div class="transparency-card">
+            <span class="transparency-icon">✈️</span>
+            <h4>Member Travel Grants</h4>
+            <p>Subsidizing flight, lodging, and registration fees for Yellow Jackets attending national Latinx leadership conferences.</p>
+          </div>
+
+        </div>
+
+        <!-- Callout Box -->
+        <div class="support-cta-box">
+          <h3>Help Us Keep Every Tradition Alive</h3>
+          <p>
+            Whether $15 or $250, your tax-deductible contribution directly shapes student lives, fosters inclusive community, and strengthens cultural pride at Georgia Tech.
+          </p>
+          <a href="donate.html" class="btn btn-gold">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            Make a Contribution
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GET INVOLVED SECTION -->
+    <section class="involve-section" id="get-involved">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>Únete a Nuestra Familia</span>
+          </div>
+          <h2 class="section-title">How to Get Involved</h2>
+          <p class="section-subtitle">
+            All Georgia Tech undergraduate, graduate, alumni, faculty, and staff are warmly welcome. No prior fluency test or background required!
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <h3>Join on GT Engage</h3>
+            <p>
+              Log in to the official Georgia Tech Engage portal with your GT credentials and request membership to receive official voting status and announcements.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <h3>Enter our GroupMe</h3>
+            <p>
+              Stay updated on informal dining meetups, impromptu study sessions in the CULC, carpooling to festivals, and flash reminders.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <h3>Come to a Conversation Table</h3>
+            <p>
+              Drop by the Student Center any Wednesday or Thursday at 6:00 PM. Grab an empanada, pull up a chair, and say <em>¡Hola!</em>
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Community Box -->
+        <div class="community-box">
+          <div class="community-box-content">
+            <h3>Ready to join GT SSO?</h3>
+            <p>Sign up to receive our weekly bulletin and calendar invitations.</p>
+          </div>
+          <div class="community-box-actions">
+            <button class="btn btn-primary" id="openJoinModalBtn">Sign Up for Updates</button>
+            <a href="donate.html" class="btn btn-donate-nav">Support Our Programs</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- OFFICIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+            <div class="brand-crest" style="width:38px; height:38px; font-size:1rem;">SSO</div>
+            <h3 style="margin:0;">GT SSO</h3>
+          </div>
+          <p>
+            Spanish Speaking Organization at the Georgia Institute of Technology. Building comunidad, celebrating culture, and elevating student leaders across campus.
+          </p>
+          <div class="footer-socials">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/gatech_sso/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/school/georgia-institute-of-technology/posts/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <!-- GroupMe / Chat -->
+            <a href="#get-involved" class="social-btn" aria-label="GroupMe">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+            <!-- Mail -->
+            <a href="mailto:gtsspanishspeakingorg@gmail.com" class="social-btn" aria-label="Email GT SSO">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Our Mission</a></li>
+            <li><a href="#events">Cultural Calendar</a></li>
+            <li><a href="#programs">Scholarship Fund</a></li>
+            <li><a href="#leadership">Executive Board</a></li>
+            <li><a href="#get-involved">Join as a Member</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div class="footer-col">
+          <h4>Support &amp; Giving</h4>
+          <ul class="footer-links">
+            <li><a href="donate.html">Donate to GT SSO</a></li>
+            <li><a href="#support">Where Your Support Goes</a></li>
+            <li><a href="donate.html">Study-Abroad Grants</a></li>
+            <li><a href="donate.html">Corporate Sponsorships</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Campus Contact -->
+        <div class="footer-col">
+          <h4>Campus Contact</h4>
+          <div class="footer-contact-info">
+            <p><strong>Georgia Tech Student Center</strong></p>
+            <p>350 Ferst Dr NW, Suite 2101</p>
+            <p>Atlanta, GA 30332</p>
+            <p style="margin-top: 10px;">
+              Email: <a href="mailto:gtsspanishspeakingorg@gmail.com">gtsspanishspeakingorg@gmail.com</a><br>
+              Web: <a href="https://gtspanishspeaking.org">gtspanishspeaking.org</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom & Disclaimers -->
+      <div class="footer-bottom">
+        <div class="footer-disclaimer">
+          <strong>Campus Affiliation Disclaimer:</strong> The Spanish Speaking Organization is a registered student organization at the Georgia Institute of Technology. GT SSO operates in accordance with Institute student organization guidelines and the Student Organizations Code of Conduct.
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <div>&copy; 2026 Georgia Tech Spanish Speaking Organization (GT SSO). All rights reserved.</div>
+          <div>Made with orgullo for Georgia Tech Yellow Jackets 🐝</div>
+        </div>
+      </div>
 
     </div>
+  </footer>
+
+  <!-- INTERACTIVE RSVP & JOIN MODAL -->
+  <div class="modal-backdrop" id="rsvpModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      <h3 id="modalTitle">RSVP for Event</h3>
+      <p id="modalSubtitle">Join us for this GT SSO gathering. Please share your details to reserve a spot.</p>
+
+      <form class="modal-form" id="rsvpForm" onsubmit="handleModalSubmit(event)">
+        <div class="form-field">
+          <label for="rsvpName">Full Name</label>
+          <input type="text" id="rsvpName" placeholder="Elena Gomez" required>
+        </div>
+        <div class="form-field">
+          <label for="rsvpEmail">Georgia Tech or Personal Email</label>
+          <input type="email" id="rsvpEmail" placeholder="egomez@gatech.edu" required>
+        </div>
+        <div class="form-field">
+          <label for="rsvpAffiliation">Affiliation</label>
+          <select id="rsvpAffiliation">
+            <option value="undergrad">GT Undergraduate Student</option>
+            <option value="grad">GT Graduate Student</option>
+            <option value="alumni">GT Alumni</option>
+            <option value="faculty">Faculty / Staff</option>
+            <option value="community">Atlanta Community Member</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Confirm Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LIGHTWEIGHT VANILLA JAVASCRIPT -->
+  <script>
+    // 1. Mobile Drawer Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = mobileDrawer.classList.toggle('open');
+      mobileBtn.classList.toggle('open');
+      mobileBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        mobileBtn.classList.remove('open');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close drawer when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileDrawer.contains(e.target) && !mobileBtn.contains(e.target) && mobileDrawer.classList.contains('open')) {
+        mobileDrawer.classList.remove('open');
+        mobileBtn.classList.remove('open');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // 2. Dynamic Photo Carousel
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    let currentSlide = 0;
+    let carouselInterval;
+
+    function goToSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+    if (nextBtn && prevBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetCarouselTimer();
+      });
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetCarouselTimer();
+      });
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        resetCarouselTimer();
+      });
+    });
+
+    function startCarouselTimer() {
+      carouselInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetCarouselTimer() {
+      clearInterval(carouselInterval);
+      startCarouselTimer();
+    }
+
+    startCarouselTimer();
+
+    // Pause on hover
+    const carouselElem = document.getElementById('heroCarousel');
+    if (carouselElem) {
+      carouselElem.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+      carouselElem.addEventListener('mouseleave', startCarouselTimer);
+    }
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    if (carouselElem) {
+      carouselElem.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      carouselElem.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 45) {
+          nextSlide();
+          resetCarouselTimer();
+        } else if (touchEndX - touchStartX > 45) {
+          prevSlide();
+          resetCarouselTimer();
+        }
+      }, { passive: true });
+    }
+
+    // 3. Animated Key Statistics Counters
+    const counters = document.querySelectorAll('.counter');
+    let counterTriggered = false;
+
+    function animateCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 1600;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out cubic
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          const currentVal = Math.floor(easeOut * target);
+
+          counter.innerText = currentVal.toLocaleString();
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.innerText = target.toLocaleString();
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      });
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !counterTriggered) {
+          counterTriggered = true;
+          animateCounters();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+      statsObserver.observe(statsSection);
+    }
+
+    // 4. Events Filter Tabs
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const eventCards = document.querySelectorAll('.event-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+        eventCards.forEach(card => {
+          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 5. Add to Calendar (.ics Generator)
+    const calTriggers = document.querySelectorAll('.cal-trigger');
+    calTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const title = trigger.getAttribute('data-title') || 'GT SSO Event';
+        const location = trigger.getAttribute('data-location') || 'Georgia Tech';
+        const desc = trigger.getAttribute('data-desc') || 'Georgia Tech Spanish Speaking Organization Event';
+
+        // Format sample ICS string
+        const icsContent = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'PRODID:-//Georgia Tech SSO//Events Calendar//EN',
+          'BEGIN:VEVENT',
+          'SUMMARY:' + title,
+          'DESCRIPTION:' + desc,
+          'LOCATION:' + location,
+          'DTSTART:20261018T230000Z',
+          'DTEND:20261019T030000Z',
+          'STATUS:CONFIRMED',
+          'END:VEVENT',
+          'END:VCALENDAR'
+        ].join('\r\n');
+
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.setAttribute('download', title.toLowerCase().replace(/[^a-z0-9]/g, '_') + '.ics');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    });
+
+    // 6. Interactive RSVP & Community Modal
+    const rsvpModal = document.getElementById('rsvpModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const rsvpTriggers = document.querySelectorAll('.rsvp-trigger');
+    const openJoinModalBtn = document.getElementById('openJoinModalBtn');
+
+    function openModal(title, subtitle) {
+      modalTitle.innerText = title;
+      modalSubtitle.innerText = subtitle;
+      rsvpModal.classList.add('active');
+    }
+
+    function closeModal() {
+      rsvpModal.classList.remove('active');
+    }
+
+    rsvpTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const eventName = trigger.getAttribute('data-event') || 'GT SSO Event';
+        openModal('RSVP: ' + eventName, 'Reserve your spot for ' + eventName + ' with the Georgia Tech Spanish Speaking Organization.');
+      });
+    });
+
+    if (openJoinModalBtn) {
+      openJoinModalBtn.addEventListener('click', () => {
+        openModal('Join GT SSO Community', 'Get invitations to weekly conversation tables, gala tickets, and scholarship deadlines.');
+      });
+    }
+
+    modalCloseBtn.addEventListener('click', closeModal);
+    rsvpModal.addEventListener('click', (e) => {
+      if (e.target === rsvpModal) closeModal();
+    });
+
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('rsvpName').value;
+      alert('¡Muchas gracias, ' + name + '! Your information has been registered with GT SSO. We look forward to seeing you!');
+      closeModal();
+      document.getElementById('rsvpForm').reset();
+    }
+  </script>
 
 </body>
 </html>

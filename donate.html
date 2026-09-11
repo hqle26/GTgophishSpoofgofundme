@@ -21,10 +21,16 @@
             align-items: center;
         }
         .logo {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 900;
-            color: #02a95c;
+            color: #003057;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo span {
+            color: #EAAA00;
         }
         .container {
             max-width: 580px;
@@ -37,12 +43,13 @@
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
-            color: #02a95c;
+            color: #003057;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 14px;
         }
         .back-link:hover {
+            color: #EAAA00;
             text-decoration: underline;
         }
         h1 {
@@ -50,6 +57,7 @@
             margin-top: 0;
             margin-bottom: 6px;
             font-weight: 800;
+            color: #003057;
         }
         p.subtitle {
             color: #666;
@@ -59,7 +67,7 @@
         .section-heading {
             font-size: 16px;
             font-weight: 700;
-            color: #1f2937;
+            color: #003057;
             margin-top: 25px;
             margin-bottom: 15px;
             padding-bottom: 6px;
@@ -90,7 +98,8 @@
             transition: border-color 0.2s;
         }
         input:focus, select:focus {
-            border-color: #02a95c;
+            border-color: #003057;
+            box-shadow: 0 0 0 2px rgba(0, 48, 87, 0.15);
         }
         .amount-presets {
             display: flex;
@@ -107,10 +116,12 @@
             font-size: 15px;
             cursor: pointer;
             text-align: center;
+            transition: all 0.2s;
         }
         .amount-btn:hover {
-            border-color: #02a95c;
-            background: #eefbf3;
+            border-color: #003057;
+            background: #fef8e7;
+            color: #003057;
         }
         .row {
             display: flex;
@@ -157,11 +168,11 @@
 <body>
 
     <header>
-        <a href="index.html" class="logo">GoFundMe</a>
+        <a href="index.html" class="logo">GT <span>SSO</span> &bull; Giving Portal</a>
     </header>
 
     <div class="container">
-        <a href="index.html" class="back-link">&larr; Back to GT SSO Campaign</a>
+        <a href="index.html" class="back-link">&larr; Back to GT SSO Website</a>
         <h1>Make your donation</h1>
         <p class="subtitle">Supporting Georgia Tech Spanish Speaking Organization</p>
 
